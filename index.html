@@ -6,262 +6,612 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<style>
+		.pure-li:before {
+			display: none !important;
+		}
+	</style>
 </head>
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Кто такой фронтэндер</h1>
-		<p>и что он может</p>
+		<h1>React-redux Isomorphic application</h1>
+		<p>Best practices</p>
 	</header>
 
 	<section class="slide">
-		<h2>Из чего/кого состоит веб.</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Из чего/кого состоит веб</h2>
+		<h1>Structure</h1>
 		<ul>
-			<li>заказчик</li>
-			<li>аналитик</li>
-			<li>дизайнер</li>
-			<li>менеджер проекта</li>
-			<li>системный администратор</li>
-			<li>backend разработчик</li>
-			<li>frontend разработчик</li>
+			<li>front-end side</li>
+			<li>server side</li>
+			<li>Common development principles</li>
+			<li>questions</li>
 		</ul>
 	</section>
-
-    <!--интерактив для студентов - викторина по вопросам с предложением угадать миф или реальность-->
 	<section class="slide">
-		<h2>мифы и стереотипы</h2>
-        <ul>
-            <li>frontend это просто</li>
-            <li>frontend делится на вёрстку и программирование</li>
-            <li>на js ничего серъёзного ничего не сделаешь</li>
-            <li>можно обучится за пару месяцев</li>
-        </ul>
-	</section>
-
-    <section class="slide">
-        <h2>где есть js там есть frontend</h2>
-        <p>desktop browser</p>
-        <p>desktop native</p>
-        <p>mobile browser</p>
-        <p>mobile native (ionic, )</p>
-        <p>server (backend)</p>
-        <p>IoT - буквально везде</p>
-    </section>
-
-    <section class="slide">
-        <h2>слайд мотивация</h2>
-        <p>описать пулл работ (бизнес уходит в веб, все нужно обновлять и модифицировать)</p>
-        <p>статистические картинки по зарплатам фронтэнда</p>
-    </section>
-
-	<section class="slide">
-		<h2>кто же такой фронтэнд разработчик ?</h2>
-	</section>
-
-	<section class="slide">
-		<h2>frontend разработчик - это швейцарский нож веб разработки</h2>
-        <ul>
-            <li>ui/ux специалист</li>
-            <li>DevOps engineer</li>
-            <li>backend разработчик (node.js)</li>
-            <li>тимлид - менеджер/аналитик</li>
-            <li>архитектор</li>
-        </ul>
-	</section>
-
-	<section class="slide">
-		<h2>нужно делать сайты доступными</h2>
-        <p>доступный сайт - популярный сайт</p>
-        <p>в сети намного больше людей с ограниченными возможностями, чем вы думаете</p>
-        <p>и они тоже полноценные потребители вашего ресурса</p>
-	</section>
-
-	<section class="slide">
-		<h2>так с чего же начинать?</h2>
-	</section>
-
-	<section class="slide">
-        <h2>База!</h2>
-        <ul>
-            <li>
-                <span>пикча присед - <strong>html</strong></span>
-            </li>
-            <li>
-                <span>пикча жим - <strong>css</strong> </span>
-            </li>
-            <li>
-                <span>пикча становая - <strong>js</strong> </span>
-            </li>
-        </ul>
-	</section>
-
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<p class="note"><mark><b>front-end side</b></mark></p>
 		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
 	</section>
 
+<!-- CONFIG -->
 	<section class="slide">
-		<h2>Shower key12 features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
+		<p class="note">front-end side: <mark><b>Config</b></mark></p>
 		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b></mark></li>
+			<li><mark><b>split config</b> - common, client, server</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b></mark></li>
+			<li><mark><b>split config</b> - common, client, server</mark></li>
+			<li><mark><b>separate endpoints</b> description</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
 
 	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
+		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
+			<li><mark><b>split config</b> - common, client, server</mark></li>
+			<li><mark><b>separate endpoints</b> description</mark></li>
+		</ul>
 		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
+			<li><mark><b>split config</b> - common, client, server - obviously <b>semantic separation</b></mark></li>
+			<li><mark><b>separate endpoints</b> description</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
+			<li><mark><b>split config</b> - common, client, server - obviously <b>semantic separation</b></mark></li>
+			<li><mark><b>separate endpoints</b> description - <b>ease</b> to <b>read</b> - <b>ease</b> to <b>maintain</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+		<ul>
+			<li><mark>use <b>node-config</b> module</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+		<ul>
+			<li><mark>use <b>node-config</b> module</mark></li>
+			<li><mark>prepare <b>client</b> config <b>during ssr</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- CONFIG END -->
+<!-- REQUESTS -->
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests</b></mark></p>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b></mark></li>
+			<li><mark><b>pending queue</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b></mark></li>
+			<li><mark><b>pending queue</b></mark></li>
+			<li><mark><b>single entry point</b> for action <b>creators</b> and <b>types</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
+			<li><mark><b>pending queue</b></mark></li>
+			<li><mark><b>single entry point</b> for action <b>creators</b> and <b>types</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
+			<li><mark><b>pending queue</b> - each component can handle only on <b>relevant requests</b></mark></li>
+			<li><mark><b>single entry point</b> for action <b>creators</b> and <b>types</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
+			<li><mark><b>pending queue</b> - each component can handle only on <b>relevant requests</b></mark></li>
+			<li><mark><b>single entry point</b> for action <b>creators</b> and <b>types</b> - easy navigation and debug</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<ul>
+			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<ul>
+			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
+			<li><mark>add util to <b>check</b> component <b>relative requests</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<ul>
+			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
+			<li><mark>add util to <b>check</b> component <b>relative requests</b></mark></li>
+			<li><mark>in <b>willReceiveProps</b> check and handle requests status</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- REQUESTS END -->
+<!-- ROUTING -->
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing</b></mark></p>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions</b></mark></p>
+		<ul>
+			<li><mark>use <b>React-router 4</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions</b></mark></p>
+		<ul>
+			<li><mark>use <b>React-router 4</b></mark></li>
+			<li><mark>fetch data for route in <b>didMount</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>use <b>React-router 4</b> - simple(simplier) ssr</mark></li>
+			<li><mark>fetch data for route in <b>didMount</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>use <b>React-router 4</b> - simple(simplier) ssr</mark></li>
+			<li><mark>fetch data for route in <b>didMount</b> - you don’t need to fetch data twice during <b>ssr</b> and <b>csr</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- ROUTING END -->
+<!-- ARCHITECTURE -->
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture</b></mark></p>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+			<li><mark><b>decorators</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+			<li><mark><b>decorators</b></mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+			<li><mark><b>decorators</b></mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+			<li><mark><b>decorators</b></mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
 	</section>
 
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b></mark></li>
+			<li><mark><b>decorators</b></mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
 	</section>
-
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b> - <b>consistent</b> components, <b>save</b> time</mark></li>
+			<li><mark><b>decorators</b></mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
 	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b> - <b>consistent</b> components, <b>save</b> time</mark></li>
+			<li><mark><b>decorators</b> - convinient way to add logic to your component</mark></li>
+			<li><mark>all <b>modal</b> components are wrappers</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b> - <b>consistent</b> components, <b>save</b> time</mark></li>
+			<li><mark><b>decorators</b> - convinient way to add logic to your component</mark></li>
+			<li><mark>all <b>modal</b> components are wrappers - pass in any content</mark></li>
+			<li><mark><b>smart/stupid</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b> - <b>consistent</b> components, <b>save</b> time</mark></li>
+			<li><mark><b>decorators</b> - convinient way to add logic to your component</mark></li>
+			<li><mark>all <b>modal</b> components are wrappers - pass in any content</mark></li>
+			<li><mark><b>smart/stupid</b> - <b>ease</b> to <b>read</b> - <b>ease</b> to <b>maintain</b></mark></li>
+			<li><mark><b>configureStore</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>one-direction</b> data flow - <b>Holly grail</b> of redux</mark></li>
+			<li><mark><b>propTypes models</b> - <b>consistent</b> components, <b>save</b> time</mark></li>
+			<li><mark><b>decorators</b> - convinient way to add logic to your component</mark></li>
+			<li><mark>all <b>modal</b> components are wrappers - pass in any content</mark></li>
+			<li><mark><b>smart/stupid</b> - <b>ease</b> to <b>read</b> - <b>ease</b> to <b>maintain</b></mark></li>
+			<li><mark><b>configureStore</b> - good place to add middlware and devtools</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- ARCHITECTURE END -->
 
-	<section class="slide" id="see-more">
+<!-- SPEED UP -->
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp</b></mark></p>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b></mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b></mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b></mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b></mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b></mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b></mark></li>
+			<li><mark><b>reselect</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b> - <b>render</b> automatically bind method</mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b></mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b></mark></li>
+			<li><mark><b>reselect</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b> - <b>render</b> automatically bind method</mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b> - <b>don't create</b> a new function <b>every</b> render</mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b></mark></li>
+			<li><mark><b>reselect</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b> - <b>render</b> automatically bind method</mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b> - <b>don't create</b> a new function <b>every</b> render</mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b> - handle <b>only relevant props</b> change</mark></li>
+			<li><mark><b>reselect</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common: SpeedUp - Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark>smart method <b>binding</b> - <b>render</b> automatically bind method</mark></li>
+			<li><mark><b>arrow</b> function <b>in render</b> - <b>don't create</b> a new function <b>every</b> render</mark></li>
+			<li><mark>implement <b>shouldComponentUpdate</b> - handle <b>only relevant props</b> change</mark></li>
+			<li><mark><b>reselect</b> - <b>incapsulate</b> data preparing and <b>cache props</b> with memoization</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- SPEED UP END-->
+<!-- COMMON...-->
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...</b></mark></p>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer</mark></li>
+			<li><mark><b>componentDidUpdate</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer</mark></li>
+			<li><mark><b>componentDidUpdate</b></mark></li>
+			<li><mark><b>state</b> vs <b>props</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
+			<li><mark><b>componentDidUpdate</b></mark></li>
+			<li><mark><b>state</b> vs <b>props</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
+			<li><mark><b>componentDidUpdate</b> - prevent forever cycle</mark></li>
+			<li><mark><b>state</b> vs <b>props</b></mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Common...Actions+Motivation</b></mark></p>
+		<ul>
+			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
+			<li><mark><b>componentDidUpdate</b> - prevent forever cycle</mark></li>
+			<li><mark><b>state</b> vs <b>props</b> - it's up to you</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+<!-- COMMON... END-->
+
+<section class="slide" id="see-more">
 		<h2 class="shout">
 			<img src="pictures/logo.svg" alt="Shower logo">
 			<a href="https://github.com/shower/shower">See more on GitHub</a>
