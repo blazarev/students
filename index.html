@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Isomorphic React-redux</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,40 +10,183 @@
 		.pure-li:before {
 			display: none !important;
 		}
+		.main-logo {
+			position: absolute;
+			right: 100px;
+			top: 126px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.logo {
+			width:125px;
+			height:125px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 10px;
+		}
+		.react-logo {
+			background-image: url('pictures/react-logo.png');
+		}
+		.redux-logo {
+			background-image: url('pictures/redux-logo.png');
+		}
+		.node-logo {
+			background-image: url('pictures/nodejs-logo.png');
+			background-size: 140%;
+		}
+
+		.section-description {
+			display: flex;
+		}
+		.section-description__icons {
+			display: flex;
+			margin-left: 20px;
+		}
+		.description-icon_before,
+		.description-icon_after {
+			width: 75px;
+    		height: 75px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.description-icon-separator {
+			width: 50px;
+			margin: 0 20px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url('pictures/arrow-right-c.png');
+		}
+
+		.section-description_config .description-icon_before {
+			transform: rotate(90deg);
+			background-image: url('pictures/config-logo.png');
+		}
+		.section-description_config .description-icon_after {
+			background-image: url('pictures/settings-good.png');
+		}
+
+		.section-description_requests .description-icon_before {
+			background-image: url('pictures/network-before.png');
+		}
+		.section-description_requests .description-icon_after {
+			background-image: url('pictures/network-after.png');
+		}
+
 	</style>
 </head>
 <body class="shower list">
-
 	<header class="caption">
 		<h1>React-redux Isomorphic application</h1>
 		<p>Best practices</p>
 	</header>
-
 	<section class="slide">
-		<h1>Structure</h1>
-		<ul>
-			<li>front-end side</li>
-			<li>server side</li>
-			<li>Common development principles</li>
-			<li>questions</li>
-		</ul>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
 	</section>
+	<section class="slide">
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+			<div class="logo redux-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+			<div class="logo redux-logo"></div>
+			<div class="logo node-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<ul>
+			<li><mark>front-end side</mark></li>
+		</ul>
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+			<div class="logo redux-logo"></div>
+			<div class="logo node-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<ul>
+			<li><mark>front-end side</mark></li>
+			<li><mark>server side</mark></li>
+		</ul>
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+			<div class="logo redux-logo"></div>
+			<div class="logo node-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<ul>
+			<li><mark>front-end side</mark></li>
+			<li><mark>server side</mark></li>
+			<li><mark>common advices</mark></li>
+		</ul>
+		<div class="main-logo">
+			<div class="logo react-logo"></div>
+			<div class="logo redux-logo"></div>
+			<div class="logo node-logo"></div>
+		</div>
+		<figure>
+			<img class="cover" src="pictures/best-practice-logo.jpg" alt="html, css, js">
+		</figure>
+	</section>
+<!-- CLIENT -->
 	<section class="slide">
 		<p class="note"><mark><b>front-end side</b></mark></p>
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
-<!-- CLIENT -->
 <!-- CONFIG -->
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b></mark></li>
 		</ul>
@@ -52,7 +195,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b></mark></li>
 			<li><mark><b>split config</b> - common, client, server</mark></li>
@@ -62,7 +212,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b></mark></li>
 			<li><mark><b>split config</b> - common, client, server</mark></li>
@@ -73,7 +230,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions+Motivations</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
 			<li><mark><b>split config</b> - common, client, server</mark></li>
@@ -84,7 +248,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions+Motivations</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
 			<li><mark><b>split config</b> - common, client, server - obviously <b>semantic separation</b></mark></li>
@@ -95,7 +266,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Actions+Motivations</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>single config</b> - one ring to rule them all</mark></li>
 			<li><mark><b>split config</b> - common, client, server - obviously <b>semantic separation</b></mark></li>
@@ -105,9 +283,15 @@
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
-
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark>use <b>node-config</b> module</mark></li>
 		</ul>
@@ -116,7 +300,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+		<div class="section-description section-description_config">
+			<p class="note">front-end side: <mark><b>Config - Tips</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark>use <b>node-config</b> module</mark></li>
 			<li><mark>prepare <b>client</b> config <b>during ssr</b></mark></li>
@@ -128,13 +319,27 @@
 <!-- CONFIG END -->
 <!-- REQUESTS -->
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b></mark></li>
 		</ul>
@@ -143,7 +348,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b></mark></li>
 			<li><mark><b>pending queue</b></mark></li>
@@ -153,7 +365,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b></mark></li>
 			<li><mark><b>pending queue</b></mark></li>
@@ -164,7 +383,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
 			<li><mark><b>pending queue</b></mark></li>
@@ -175,7 +401,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
 			<li><mark><b>pending queue</b> - each component can handle only on <b>relevant requests</b></mark></li>
@@ -186,7 +419,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Actions+Motivation</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark><b>request factory</b> - declarative request <b>description</b></mark></li>
 			<li><mark><b>pending queue</b> - each component can handle only on <b>relevant requests</b></mark></li>
@@ -197,7 +437,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
 		</ul>
@@ -206,7 +453,14 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
 			<li><mark>add util to <b>check</b> component <b>relative requests</b></mark></li>
@@ -217,7 +471,14 @@
 	</section>
 	</section>
 	<section class="slide">
-		<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+		<div class="section-description section-description_requests">
+			<p class="note">front-end side: <mark><b>Requests - Tips</b></mark></p>
+			<div class="section-description__icons">
+				<div class="description-icon description-icon_before"></div>
+				<div class="description-icon-separator"></div>
+				<div class="description-icon description-icon_after"></div>
+			</div>
+		</div>
 		<ul>
 			<li><mark>send <b>START_API_CALL</b> event before each request</mark></li>
 			<li><mark>add util to <b>check</b> component <b>relative requests</b></mark></li>
@@ -806,7 +1067,7 @@
 <!-- COMMON END-->
 <!-- SERVER END -->
 
-<!-- DEVELOPMENT PRINCIPLES -->
+<!-- COMMON ADVICES -->
 	<section class="slide">
 		<p class="note"><mark><b>common advices</b></mark></p>
 		<figure>
@@ -937,16 +1198,10 @@
 			<img class="cover" src="pictures/backend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
-<!-- DEVELOPMENT PRINCIPLES END-->
+<!-- COMMON ADVICES END-->
 <!-- LINKS-->
 	<section class="slide">
 		<p class="note"><mark><b>Links</b></mark></p>
-		<figure>
-			<img class="cover" src="pictures/backend-logo.png" alt="html, css, js">
-		</figure>
-	</section>
-	<section class="slide">
-		<p class="note">Links</p>
 		<ul>
 			<li><mark><b>link1</b></mark></li>
 			<li><mark><b>link2</b></mark></li>
