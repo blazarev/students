@@ -7,6 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
 	<style>
+		.cover {
+			opacity: 0.5;
+		}
+		.cover.cover-full {
+			opacity: 1;
+		}
 		.pure-li:before {
 			display: none !important;
 		}
@@ -229,6 +235,19 @@
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
+	<section class="slide">
+			<div class="section-description section-description_config">
+				<p class="note">front-end side: <mark><b>Config - Actions+Motivations</b></mark></p>
+				<div class="section-description__icons">
+					<div class="description-icon description-icon_before"></div>
+					<div class="description-icon-separator"></div>
+					<div class="description-icon description-icon_after"></div>
+				</div>
+			</div>
+			<figure>
+				<img class="cover cover-full" src="pictures/ring.jpg" alt="html, css, js">
+			</figure>
+		</section>
 	<section class="slide">
 		<div class="section-description section-description_config">
 			<p class="note">front-end side: <mark><b>Config - Actions+Motivations</b></mark></p>
@@ -519,19 +538,29 @@
 	<section class="slide">
 		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
 		<ul>
-			<li><mark>use <b>React-router 4</b> - simple(simplier) ssr</mark></li>
+			<li><mark>use <b>React-router 4</b> - simple(simplier) server side rendering</mark></li>
 			<li><mark>fetch data for route in <b>didMount</b></mark></li>
 		</ul>
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
 	</section>
+
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
+		<img class="cover cover-full" src="pictures/react-router2.png" alt="html, css, js">
+	</section>
+	<section class="slide">
+		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
+		<img class="cover cover-full" src="pictures/react-router4.png" alt="html, css, js">
+	</section>
+
 	</section>
 	<section class="slide">
 		<p class="note">front-end side: <mark><b>Routing - Actions+Motivation</b></mark></p>
 		<ul>
 			<li><mark>use <b>React-router 4</b> - simple(simplier) ssr</mark></li>
-			<li><mark>fetch data for route in <b>didMount</b> - you don’t need to fetch data twice during <b>ssr</b> and <b>csr</b></mark></li>
+			<li><mark>fetch data for route in <b>didMount</b> - you don’t need to fetch data twice during <b>ssr(server side)</b> and <b>csr(client side)</b></mark></li>
 		</ul>
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
@@ -627,6 +656,12 @@
 		<figure>
 			<img class="cover" src="pictures/frontend-logo.png" alt="html, css, js">
 		</figure>
+	</section>
+	<section class="slide">
+		<img class="cover cover-full" src="pictures/two-way-data-flow.png" alt="html, css, js">
+	</section>
+	<section class="slide">
+		<img class="cover cover-full" src="pictures/bad-spinner.png" alt="html, css, js">
 	</section>
 	<section class="slide">
 		<p class="note">front-end side: <mark><b>Common: Architecture - Actions+Motivation</b></mark></p>
@@ -859,6 +894,10 @@
 		</figure>
 	</section>
 	<section class="slide">
+		<img class="cover cover-full" src="pictures/messy-reducer.png" alt="html, css, js">
+	</section>
+
+	<section class="slide">
 		<p class="note">front-end side: <mark><b>Common...Actions+Motivation</b></mark></p>
 		<ul>
 			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
@@ -875,7 +914,7 @@
 		<ul>
 			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
 			<li><mark><b>componentDidUpdate</b> - prevent forever cycle</mark></li>
-			<li><mark><b>state</b> vs <b>props</b> - it's up to you</mark></li>
+			<li><mark><b>state</b> vs <b>props</b> - it's up to you(but recomended less state)</mark></li>
 			<li><mark><b>unit tests</b></mark></li>
 		</ul>
 		<figure>
@@ -887,7 +926,7 @@
 		<ul>
 			<li><mark><b>don’t split</b> action <b>handler</b> in reducer - messy code, hard to read</mark></li>
 			<li><mark><b>componentDidUpdate</b> - prevent forever cycle</mark></li>
-			<li><mark><b>state</b> vs <b>props</b> - it's up to you</mark></li>
+			<li><mark><b>state</b> vs <b>props</b> - it's up to you(but recomended less state)</mark></li>
 			<li><mark><b>unit tests</b> - be <b>confindent</b>, be <b>cool</b></mark></li>
 		</ul>
 		<figure>
@@ -1203,11 +1242,21 @@
 	<section class="slide">
 		<p class="note"><mark><b>Links</b></mark></p>
 		<ul>
-			<li><mark><b>link1</b></mark></li>
-			<li><mark><b>link2</b></mark></li>
-			<li><mark><b>link3</b></mark></li>
-			<li><mark><b>link4</b></mark></li>
-			<li><mark><b>link5</b></mark></li>
+			<li><mark><b>smart/stupid components</b></mark>https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0</li>
+			<li><mark><b>state vs props</b>https://hackernoon.com/understanding-state-and-props-in-react-94bc09232b9c</mark></li>
+			<li><mark><b>react-router 4</b>https://reacttraining.com/react-router/web/</mark></li>
+			<li><mark><b>node-config</b>https://github.com/lorenwest/node-config</mark></li>
+		</ul>
+		<figure>
+			<img class="cover" src="pictures/backend-logo.png" alt="html, css, js">
+		</figure>
+	</section>
+	<section class="slide">
+		<p class="note"><mark><b>Links</b></mark></p>
+		<ul>
+			<li><mark><b>jenkins CI/CD</b>https://jenkins-ci.org/</mark></li>
+			<li><mark><b>gitlab jenkins</b>https://gitlab.htc-cs.com/frontend/jenkins-ssh-keys</mark></li>
+			<li><mark><b>HTC stubs</b></mark></li>
 		</ul>
 		<figure>
 			<img class="cover" src="pictures/backend-logo.png" alt="html, css, js">
